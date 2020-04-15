@@ -12,27 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('welcome',
-        ['title' => 'An even cooler way to do the title']    
-    );
+    return view('welcome');
 });
-
-Route::get('/vuetest', function () {
-    return view('vuetest');
-});
-
-Route::get('/page', function () {
-    return view('page',
-        [
-            'title' => 'Page 2 - A little about the Author',
-            'author' => json_encode([
-                "name" => "Fisayo Afolayan",
-                "role" => "Softeware Engineer",
-                "code" => "Always keeping it clean",
-            ])]    
-    );
-});
-
-Route::get('/{any}', function(){
-    return view('vueapp');
-})->where('any', '.*');
