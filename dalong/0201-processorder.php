@@ -30,7 +30,6 @@ $date = date('H:i, jS F Y');
                         . $sparkqty . ' spark plugs,' . $address . '\n';
         @$fp = fopen('$document_root/../orders/orders.txt', 'ab');
         fwrite($fp, $outputstring, strlen($outputstring));
-        fclose($fp);
 
         echo '<p>order written.</p>';
         ?>    

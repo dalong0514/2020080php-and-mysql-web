@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('test');
 });
+
+Route::get('/view', function () {
+    return view('vieworder');
+});
